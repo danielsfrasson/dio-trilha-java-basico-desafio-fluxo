@@ -14,16 +14,14 @@ public class Contador {
             contar(parametroUm, parametroDois);
 
         } catch (ParametrosInvalidosException e) {
-            System.out.println("O segundo parâmetro deve ser maior que o primeiro.");
+            System.out.println(e.getMessage());
         }
 
     }
     static void contar(int parametroUm, int parametroDois ) throws ParametrosInvalidosException {
-        //validar se parametroUm é MAIOR que parametroDois e lançar a exceção
         if(parametroUm>parametroDois || parametroUm == parametroDois) throw new ParametrosInvalidosException();
 
         int contagem = parametroDois - parametroUm;
-        //realizar o for para imprimir os números com base na variável contagem
         for (int i = 1; i <= contagem; i++){
             System.out.println("Imprimindo o número " + i);
         }
